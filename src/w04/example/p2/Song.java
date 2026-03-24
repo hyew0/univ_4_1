@@ -1,4 +1,4 @@
-package w04.p2;
+package w04.example.p2;
 
 public class Song {
 

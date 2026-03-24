@@ -1,6 +1,6 @@
-package w04.p1;
+package w04.example.p2;
 
-public class MainCircle {
+public class MainSong {
     public static void main(String[] args) {
 
     }
