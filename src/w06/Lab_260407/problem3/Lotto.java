@@ -8,6 +8,9 @@ import java.util.Random;
 public class Lotto {
     public static void main(String[] args) {
         int[] lotto = new int[6];
+        /*Math.random()을 쓰면 (int)(Math.random() * 45) + 1 처럼 실수(double)를 정수(int)로 강제 변환하는 복잡한 수식을 써야 해서,
+         Random 객체를 사용하여 rand.nextInt(45)처럼 정수 추출 전용 메서드 사용함.
+         */
         Random rand = new Random();
 
         // 숫자 6개를 랜덤으로 추출 (중복 제거)
@@ -45,6 +48,8 @@ public class Lotto {
         System.out.println("+ " + bonus);
 
         // 현재 시간(년월일 시분초) 출력
+        // [참고] Calendar 클래스는 월(Month)을 0부터 계산하여 직관적이지 않고 버그 발생 쉬움.
+        // 따라서 직관적이고 깔끔한 출력 형식을 지정할 수 있는 Date와 SimpleDateFormat을 사용.
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
         System.out.println(sdf.format(new Date()));
     }
